@@ -109,6 +109,9 @@ find . -name "*.class" -delete
 	</execution>
 </executions>"
 
+# Add alias
+%mvn_file org.jitsi:org.%{name} org.jitsi:%{name}
+
 # Fix jar name
 %mvn_file :%{name} %{name}-%{version} %{name}
 
